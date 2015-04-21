@@ -1,0 +1,87 @@
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+// In order to get the closest font to Avenir, we use Nunito font.
+// More info here: http://joelcrawfordsmith.com/closest-font/font/avenir
+// --------------------------------------------------
+@import url("http://fonts.googleapis.com/css?family=Nunito:300,400,700");
+
+@type-micro: 8px;
+@type-smallest: 11px;
+@type-smaller: 12px;
+@type-small: 14px;
+@type-base: 16px;
+@type-large: 18px;
+@type-larger: 20px;
+@type-largest: 25px;
+@type-jumbo: 30px;
+
+
+// font-family: 'Avenir Next Pro Demi'
+// font-family: 'Avenir Next Pro'
+// font-family: 'Avenir Next Pro Medium'
+// font-family: 'Avenir Next Pro UltraLight'
+
+// @font-base: "Avenir Next Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+@font-base: "Nunito", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+@font-menu: "Montserrat", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+@font-hero-title: @font-menu;
+
+
+@font-face {
+	font-family: 'fontello';
+	src: url('../fonts/fontello/fontello.eot?24868836');
+	src:	url('../fonts/fontello/fontello.eot?24868836#iefix') format('embedded-opentype'),
+			url('../fonts/fontello/fontello.woff?24868836') format('woff'),
+			url('../fonts/fontello/fontello.ttf?24868836') format('truetype'),
+			url('../fonts/fontello/fontello.svg?24868836#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+ 
+[class^="icon-"]:before {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	/* opacity: .8; */
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
+
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+	margin-left: .2em;
+
+	/* you can be more comfortable with increased icons size */
+	/* font-size: 120%; */
+
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-facebook:before {
+	content: '\e800';
+}
+.icon-twitter:before {
+	content: '\e801';
+}
+.icon-mail-alt:before {
+	content: '\e802';
+}
+.icon-looped-square-interest:before {
+	content: '\e803';
+}

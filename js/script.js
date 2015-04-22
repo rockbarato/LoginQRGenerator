@@ -2,12 +2,15 @@ jQuery(document).ready(function($){
 	
 	$("#submit-button").click(function(){
 
+		$("#qr-image").attr("src", "");
+
 		var sn = $("#serial-number").val(),
 			ac = $("#activation-code").val();
 
-		var t = urlencode("<QRCode><SN>" + $.trim(sn) + "</SN><AC>" + $.trim(ac) + "</AC></QRCode>");
+		var t = "<QRCode><SN>" + $.trim(sn) + "</SN><AC>" + $.trim(ac) + "</AC></QRCode>",
+			tc= urlencode(t);
 
-		$("#qr-image").attr("src", "https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=" + t + "&choe=UTF-8");
+		$("#qr-image").attr("src", "https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=" + tc + "&choe=UTF-8");
 
 	});
 
